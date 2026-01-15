@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include<vector>
 
 // 练习目标：
 // 1. 掌握 std::cin 和 std::cout 的基本使用
@@ -15,15 +16,22 @@ int main() {
   // 3. 平均分是多少 (Average)
 
   // 提示：你需要定义变量来追踪总和(sum)和数量(count)
-
+  
   std::cout << "请输入学生成绩 (输入 -1 结束): " << std::endl;
-
-  int score;
+  int score,cnt,sum=0,cout=0;
+  while(std::cin>>cnt)
+  {
+    if(cnt==-1)
+      break;
+    sum+=cnt;
+    cout++;  
+  }
+std::cout<<"The input score cout is"<<cout
+<<"The sum is"<<sum<<"The average is"<<sum/cout<<std::endl;
   // TODO: 在下方编写你的代码
   // 参考思路：
   // while (std::cin >> score) {
   //    if (score == -1) ...
   // }
-
   return 0;
 }
