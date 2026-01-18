@@ -53,6 +53,7 @@ class Screen
   inline char get(pos r,pos c)const;
   Screen &display(std::ostream&os){do_display(os);return *this;}
   const Screen &display(std::ostream &os)const{do_display(os);return *this;}
+  private :
   void do_display(std::ostream &os)const
   {
     for (pos i = 0; i < contents.size(); ++i)
@@ -65,8 +66,6 @@ class Screen
         }
     }
   }
-  
-  private:
   pos cursor=0;
   pos height=0,width=0;
   std::string contents;
